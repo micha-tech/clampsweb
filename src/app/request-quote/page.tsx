@@ -17,7 +17,18 @@ const quickServices = [
   "Automation",
 ];
 
-export default function RequestQuotePage() {
+type RequestQuotePageProps = {
+  searchParams?: Promise<{
+    submitted?: string;
+  }>;
+};
+
+export default async function RequestQuotePage({
+  searchParams,
+}: RequestQuotePageProps) {
+  const params = await searchParams;
+  const submitted = params?.submitted === "1";
+
   return (
     <main className="light-grid-bg">
       <section className="relative overflow-hidden bg-navy-900 py-16 text-white sm:py-20">
@@ -38,7 +49,7 @@ export default function RequestQuotePage() {
       <section className="overflow-hidden py-14 sm:py-20">
         <div className="section-shell grid gap-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-start">
           <FadeIn>
-            <QuoteForm />
+            <QuoteForm initialSubmitted={submitted} />
           </FadeIn>
 
           <aside className="grid gap-5">

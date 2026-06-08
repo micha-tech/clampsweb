@@ -1,7 +1,7 @@
 "use client";
 
 import { Building2, Send, UserRound } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import {
   budgetOptions,
@@ -47,19 +47,45 @@ function FormSection({
   );
 }
 
-export function QuoteForm() {
-  const [submitted, setSubmitted] = useState(false);
+type QuoteFormProps = {
+  initialSubmitted?: boolean;
+};
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
-  }
+export function QuoteForm({ initialSubmitted = false }: QuoteFormProps) {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [submitted, setSubmitted] = useState(initialSubmitted);
+
+  useEffect(() => {
+    const form = formRef.current;
+
+    if (!form) {
+      return;
+    }
+
+    const submitInquiry = (event: Event) => {
+      event.preventDefault();
+      setSubmitted(true);
+    };
+
+    form.addEventListener("submit", submitInquiry);
+
+    return () => form.removeEventListener("submit", submitInquiry);
+  }, []);
 
   return (
     <form
-      onSubmit={handleSubmit}
+      ref={formRef}
+      id="engineering-consultation-form"
+      action="#engineering-consultation-form"
+      noValidate
+      onSubmit={(event) => {
+        event.preventDefault();
+        setSubmitted(true);
+      }}
       className="technical-rule rounded-lg border border-steel-100 bg-white p-5 shadow-industrial sm:p-7"
     >
+      <input type="hidden" name="submitted" value="1" />
+
       {submitted ? (
         <div
           role="status"

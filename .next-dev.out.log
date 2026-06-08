@@ -1,0 +1,23 @@
+
+> clamps-engineering-site@0.1.0 dev
+> next dev -p 3000
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.92.239.28:3000
+✓ Ready in 1097ms
+
+ GET / 200 in 4.8s (next.js: 1059ms, application-code: 3.7s)
+ GET / 200 in 589ms (next.js: 7ms, application-code: 581ms)
+ GET / 200 in 3.3s (next.js: 325ms, application-code: 2.9s)
+ GET / 200 in 987ms (next.js: 7ms, application-code: 980ms)
+ GET / 200 in 1364ms (next.js: 112ms, application-code: 1252ms)
+✓ Compiled in 395ms
+ GET / 200 in 3.0s (next.js: 274ms, application-code: 2.7s)
+ GET / 200 in 595ms (next.js: 5ms, application-code: 590ms)
+ GET / 200 in 584ms (next.js: 6ms, application-code: 578ms)
+✓ Compiled in 3.9s
+ GET / 200 in 1499ms (next.js: 168ms, application-code: 1332ms)
+ GET / 200 in 1342ms (next.js: 149ms, application-code: 1193ms)
+ GET / 200 in 587ms (next.js: 5ms, application-code: 583ms)
+ GET /request-quote 200 in 1513ms (next.js: 280ms, application-code: 1232ms)

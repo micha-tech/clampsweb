@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f7fafc;
+  --foreground: #071b34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  text-rendering: geometricPrecision;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(74, 183, 255, 0.28);
+  color: #061422;
+}
+
+.industrial-bg {
+  background:
+    linear-gradient(90deg, rgba(125, 211, 252, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(125, 211, 252, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, #04101f 0%, #071b34 52%, #102f50 100%);
+  background-size: 96px 96px, 96px 96px, auto;
+}
+
+.light-grid-bg {
+  background:
+    linear-gradient(90deg, rgba(7, 27, 52, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(7, 27, 52, 0.035) 1px, transparent 1px),
+    #f7fafc;
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+.blueprint-panel {
+  background:
+    linear-gradient(90deg, rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(7, 27, 52, 0.92), rgba(18, 54, 94, 0.92));
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clamps-blue focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.premium-card {
+  @apply border border-steel-100 bg-white shadow-industrial-sm;
+}
+
+.technical-rule {
+  position: relative;
+}
+
+.technical-rule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(77, 163, 255, 0),
+    rgba(77, 163, 255, 0.65),
+    rgba(125, 211, 252, 0)
+  );
+}

@@ -194,7 +194,7 @@ export const projects = [
     category: "Treatment Plant Construction",
     location: "Niger Delta",
     discipline: "Water Treatment",
-    image: "/project-images/water-treatment-plants.jpg",
+    image: "/project-images/water.jpg",
     summary:
       "Distributed water treatment plant construction supporting reliable access across programme sites.",
   },
@@ -221,7 +221,7 @@ export const projects = [
     category: "Fire Protection",
     location: "Abuja",
     discipline: "Life Safety Systems",
-    image: "/project-images/fire-protection-system.jpg",
+    image: "/project-images/Fire.jpg",
     summary:
       "Active fire safety infrastructure for a major commercial and operational facility.",
   },

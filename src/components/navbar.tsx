@@ -23,21 +23,8 @@ export function Navbar() {
           <BrandLogo
             variant="full"
             priority
-            className="hidden h-14 w-auto object-contain sm:block"
+            className="h-10 w-auto max-w-52 object-contain sm:h-14 sm:max-w-none"
           />
-          <BrandLogo
-            variant="mark"
-            priority
-            className="h-12 w-12 object-contain sm:hidden"
-          />
-          <span className="min-w-0 leading-tight sm:hidden">
-            <span className="block truncate font-display text-sm font-semibold text-navy-900">
-              Clamps Engineering
-            </span>
-            <span className="block text-xs font-medium text-steel-500">
-              Solutions LTD
-            </span>
-          </span>
         </Link>
 
         <div className="hidden items-center gap-7 xl:flex">

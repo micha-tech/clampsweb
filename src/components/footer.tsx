@@ -15,8 +15,8 @@ export function Footer() {
             />
           </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-steel-200">
-            Premium mechanical engineering, water infrastructure, fire protection,
-            electrical, automation, and maintenance support for dependable systems.
+            Mechanical engineering, water infrastructure, fire protection,
+            electrical, automation, and maintenance for dependable systems.
           </p>
         </div>
 
@@ -48,9 +48,10 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-semibold text-clamps-cyan">Contact</h2>
           <div className="mt-4 space-y-3 text-sm leading-6 text-steel-200">
-            <p>Email: enquiries@clampsengineering.com</p>
-            <p>Phone: +234 (0) 000 000 0000</p>
-            <p>Office: Lagos, Nigeria</p>
+            <p>Email: info@clampsengineering.com</p>
+            <p>Phone: +234 813 698 2856</p>
+            <p>Phone: +234 703 129 4368</p>
+            <p>Address: 2, Barracks Road, Car wash Bus Stop, Isheri-Idimu, Egbeda Lagos.</p>
           </div>
           <Link
             href="/request-quote"

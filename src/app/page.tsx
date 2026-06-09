@@ -1,9 +1,4 @@
-import {
-  ArrowRight,
-  BadgeCheck,
-  CheckCircle2,
-  FileCheck2,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { FadeIn, MotionCard } from "@/components/motion";
@@ -13,7 +8,6 @@ import { SectionHeader } from "@/components/section-header";
 import { ServiceCard } from "@/components/service-card";
 import {
   capabilities,
-  credibilityPlaceholders,
   deliveryLifecycle,
   industries,
   metrics,
@@ -32,17 +26,15 @@ export default function Home() {
         <div className="section-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
           <div className="min-w-0 max-w-3xl">
             <FadeIn>
-              <h1 className="max-w-full break-words font-display text-3xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="font-display text-3xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
                 Engineering Critical Infrastructure For Water, Fire Protection
                 & Industrial Systems
               </h1>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <p className="mt-6 max-w-2xl break-words text-base leading-8 text-steel-200 sm:text-lg">
-                Clamps Engineering Solutions LTD delivers dependable engineering
-                systems where performance, safety, and long-term reliability
-                matter most for communities, industries, institutions, and
-                commercial facilities.
+              <p className="mt-6 max-w-2xl text-base leading-8 text-steel-200 sm:text-lg">
+                Dependable engineering for water systems, fire protection,
+                electrical, automation, and industrial projects across Nigeria.
               </p>
             </FadeIn>
             <FadeIn delay={0.14}>
@@ -108,17 +100,8 @@ export default function Home() {
             <SectionHeader
               label="About Clamps"
               title="A Lagos-based engineering partner for systems that must keep performing."
-              description="Clamps Engineering Solutions LTD delivers mechanical, water infrastructure, fire protection, electrical, automation, and maintenance solutions for projects where technical competence and dependable execution are essential."
+              description="Mechanical, water infrastructure, fire protection, electrical, automation, and maintenance solutions for projects where technical competence and dependable execution are essential."
             />
-            <FadeIn delay={0.08}>
-              <p className="mt-6 text-base leading-8 text-steel-500">
-                The company supports utilities, estates, industrial facilities,
-                commercial assets, public schemes, and institutions with a field
-                execution mindset. Every engagement is approached around
-                durability, safety, commissioning readiness, maintainability, and
-                clear project communication.
-              </p>
-            </FadeIn>
           </div>
 
           <FadeIn delay={0.12}>
@@ -160,7 +143,7 @@ export default function Home() {
           <SectionHeader
             label="Engineering Capabilities"
             title="Technical breadth for critical water, fire protection, electrical, automation, and industrial systems."
-            description="Clamps brings together the project disciplines organizations need when infrastructure must be designed, installed, rehabilitated, commissioned, and maintained with confidence."
+            description="Design, installation, rehabilitation, commissioning, and maintenance for critical infrastructure systems."
             align="center"
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -217,7 +200,7 @@ export default function Home() {
           <SectionHeader
             label="How We Deliver Engineering Projects"
             title="A disciplined project lifecycle from site assessment to operations support."
-            description="Clamps approaches engineering delivery as a connected process, reducing handover risk and improving long-term system dependability."
+            description="A connected process from site assessment to operations support, reducing handover risk and improving system dependability."
             inverse
             align="center"
           />
@@ -257,7 +240,7 @@ export default function Home() {
           <SectionHeader
             label="Industries We Serve"
             title="Built for the organizations responsible for dependable infrastructure and safe operations."
-            description="The website now gives enterprise visitors immediate signals that Clamps understands their environment, asset type, and delivery expectations."
+            description="Water utilities, manufacturing, government infrastructure, commercial real estate, industrial facilities, residential estates, and institutional facilities."
             align="center"
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -283,15 +266,8 @@ export default function Home() {
             <SectionHeader
               label="Project Portfolio"
               title="Selected engineering work across water infrastructure, fire protection, estates, and industrial systems."
-              description="Each portfolio card highlights project category, location, engineering discipline, and a concise overview without overstating scale or claims."
+              description="Each project card highlights category, location, engineering discipline, and scope delivered."
             />
-            <FadeIn delay={0.12}>
-              <div className="rounded-lg border border-steel-100 bg-steel-50 p-5 text-sm leading-7 text-steel-600">
-                Portfolio structure is ready for real project photography,
-                client logos, completion dates, and case-study detail as those
-                assets become available.
-              </div>
-            </FadeIn>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, index) => (
@@ -311,7 +287,7 @@ export default function Home() {
             <SectionHeader
               label="Safety & Quality Commitment"
               title="Rigorous engineering, safety, and quality standards across the project lifecycle."
-              description="We maintain rigorous engineering, safety, and quality standards throughout planning, installation, commissioning, and maintenance activities."
+              description="Rigorous standards applied across planning, installation, commissioning, and maintenance."
               inverse
             />
             <div className="grid gap-5 sm:grid-cols-2">
@@ -327,41 +303,6 @@ export default function Home() {
                     <p className="mt-3 text-sm leading-7 text-steel-200">
                       {commitment.description}
                     </p>
-                  </article>
-                </MotionCard>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="overflow-hidden bg-steel-50 py-20 sm:py-24">
-        <div className="section-shell">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <SectionHeader
-              label="Corporate Credibility"
-              title="Structured for the proof points enterprise buyers expect."
-              description="These placeholders give Clamps a clean expansion path for client logos, certifications, accreditations, engineering partners, and industry memberships."
-            />
-            <div className="grid gap-4 sm:grid-cols-2">
-              {credibilityPlaceholders.map((item, index) => (
-                <MotionCard key={item} delay={index * 0.04}>
-                  <article className="flex items-center gap-4 rounded-lg border border-dashed border-steel-200 bg-white p-5">
-                    <div className="grid h-11 w-11 place-items-center rounded-lg bg-navy-900 text-clamps-cyan">
-                      {index % 2 === 0 ? (
-                        <BadgeCheck aria-hidden className="h-5 w-5" />
-                      ) : (
-                        <FileCheck2 aria-hidden className="h-5 w-5" />
-                      )}
-                    </div>
-                    <div>
-                      <h3 className="font-display text-base font-semibold text-navy-900">
-                        {item}
-                      </h3>
-                      <p className="mt-1 text-sm text-steel-500">
-                        Ready for verified company credentials.
-                      </p>
-                    </div>
                   </article>
                 </MotionCard>
               ))}

@@ -9,3 +9,14 @@ module.exports = {
 }
 
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⨯ ReferenceError: useRef is not defined
+    at QuoteForm (src\components\quote-form.tsx:55:19)
+  53 |
+  54 | export function QuoteForm({ initialSubmitted = false }: QuoteFormProps) {
+> 55 |   const formRef = useRef<HTMLFormElement>(null);
+     |                   ^
+  56 |   const [submitted, setSubmitted] = useState(initialSubmitted);
+  57 |
+  58 |   useEffect(() => { {
+  digest: '442566016'
+}

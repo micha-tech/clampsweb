@@ -16,14 +16,10 @@ export function MobileStickyCTA() {
 
     const updateVisibility = () => setVisible(window.scrollY > 520);
 
-    const frame = window.requestAnimationFrame(updateVisibility);
     window.addEventListener("scroll", updateVisibility, { passive: true });
-    const interval = window.setInterval(updateVisibility, 250);
 
     return () => {
-      window.cancelAnimationFrame(frame);
       window.removeEventListener("scroll", updateVisibility);
-      window.clearInterval(interval);
     };
   }, [pathname]);
 

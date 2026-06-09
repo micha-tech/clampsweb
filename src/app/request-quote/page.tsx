@@ -1,5 +1,4 @@
 import {
-  BadgeCheck,
   CheckCircle2,
   Clock,
   FileText,
@@ -8,7 +7,7 @@ import {
 } from "lucide-react";
 import { FadeIn, MotionCard } from "@/components/motion";
 import { QuoteForm } from "@/components/quote-form";
-import { credibilityPlaceholders, quoteSteps } from "@/lib/content";
+import { quoteSteps } from "@/lib/content";
 
 const quickServices = [
   "Water Systems",
@@ -143,29 +142,6 @@ export default async function RequestQuotePage({
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-16">
-        <div className="section-shell">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {credibilityPlaceholders.map((item, index) => (
-              <MotionCard key={item} delay={index * 0.04}>
-                <article className="flex h-full items-center gap-3 rounded-lg border border-dashed border-steel-200 bg-steel-50 p-4">
-                  <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-clamps-cyan">
-                    <BadgeCheck aria-hidden className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h2 className="font-display text-sm font-semibold text-navy-900">
-                      {item}
-                    </h2>
-                    <p className="mt-1 text-xs leading-5 text-steel-500">
-                      Placeholder ready for verified proof.
-                    </p>
-                  </div>
-                </article>
-              </MotionCard>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

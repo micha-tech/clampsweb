@@ -1,7 +1,7 @@
 "use client";
 
 import { Building2, Send, UserRound } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import type { ReactNode } from "react";
 import {
   budgetOptions,
@@ -52,48 +52,24 @@ type QuoteFormProps = {
 };
 
 export function QuoteForm({ initialSubmitted = false }: QuoteFormProps) {
-  const formRef = useRef<HTMLFormElement>(null);
   const [submitted, setSubmitted] = useState(initialSubmitted);
-
-  useEffect(() => {
-    const form = formRef.current;
-
-    if (!form) {
-      return;
-    }
-
-    const submitInquiry = (event: Event) => {
-      event.preventDefault();
-      setSubmitted(true);
-    };
-
-    form.addEventListener("submit", submitInquiry);
-
-    return () => form.removeEventListener("submit", submitInquiry);
-  }, []);
 
   return (
     <form
-      ref={formRef}
       id="engineering-consultation-form"
-      action="#engineering-consultation-form"
-      noValidate
       onSubmit={(event) => {
         event.preventDefault();
         setSubmitted(true);
       }}
       className="technical-rule rounded-lg border border-steel-100 bg-white p-5 shadow-industrial sm:p-7"
     >
-      <input type="hidden" name="submitted" value="1" />
-
       {submitted ? (
         <div
           role="status"
           className="mb-7 rounded-lg border border-clamps-line bg-clamps-blue/10 px-4 py-3 text-sm font-semibold text-navy-900"
         >
-          Your project inquiry is ready for engineering review. Connect this form
-          to your preferred CRM, email, or backend workflow before production
-          launch.
+          Thank you. Your project inquiry has been received and will be reviewed
+          by our engineering team.
         </div>
       ) : null}
 

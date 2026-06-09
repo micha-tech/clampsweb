@@ -69,7 +69,7 @@ export const capabilities = [
   {
     title: "Fire Protection Engineering",
     description:
-      "Active fire protection systems for commercial, industrial, institutional, and high-risk operational facilities.",
+      "Active fire protection for commercial, industrial, and institutional facilities.",
     icon: ShieldCheck,
   },
   {
@@ -108,21 +108,21 @@ export const services = [
   {
     title: "Water Engineering",
     description:
-      "Design, rehabilitation, reticulation, pumping, treatment plants, and water infrastructure systems.",
+      "Design, rehabilitation, reticulation, pumping, and water treatment infrastructure.",
     icon: Droplets,
     accent: "Infrastructure systems",
   },
   {
     title: "Fire Protection Systems",
     description:
-      "Active fire protection systems for commercial, industrial, and institutional facilities.",
+      "Active fire protection for commercial, industrial, and institutional facilities.",
     icon: Flame,
     accent: "Safety-critical protection",
   },
   {
     title: "Electrical Systems",
     description:
-      "Electrical infrastructure, power systems, control panels, and engineering support.",
+      "Power infrastructure, control panels, and electrical engineering support.",
     icon: Cable,
     accent: "Power and controls",
   },
@@ -242,36 +242,30 @@ export const safetyCommitments = [
   {
     title: "Safety First",
     description:
-      "Field activity is planned around safe execution, hazard awareness, and responsible site conduct.",
+      "Planned around safe execution, hazard awareness, and responsible site conduct.",
     icon: ShieldCheck,
   },
   {
     title: "Quality Assurance",
     description:
-      "Engineering works are reviewed for specification alignment, installation quality, and performance readiness.",
+      "Engineering works reviewed for specification alignment, installation quality, and performance readiness.",
     icon: BadgeCheck,
   },
   {
     title: "Engineering Excellence",
     description:
-      "Technical decisions prioritize reliability, maintainability, operational clarity, and long-term value.",
+      "Decisions prioritize reliability, maintainability, and long-term operational value.",
     icon: HardHat,
   },
   {
     title: "Risk Management",
     description:
-      "Project planning considers operational, safety, procurement, and commissioning risks from the outset.",
+      "Project planning considers operational, safety, procurement, and commissioning risks.",
     icon: ClipboardCheck,
   },
 ];
 
-export const credibilityPlaceholders = [
-  "Client Logos",
-  "Certifications",
-  "Accreditations",
-  "Engineering Partners",
-  "Industry Memberships",
-];
+export const credibilityPlaceholders: string[] = [];
 
 export const quoteSteps = [
   "Project Inquiry Submitted",

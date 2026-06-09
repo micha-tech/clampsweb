@@ -212,7 +212,7 @@ export const projects = [
     category: "Estate Infrastructure",
     location: "Lagos",
     discipline: "Reticulation Networks",
-    image: "/project-images/estate-reticulation-network.jpg",
+    image: "/project-images/water-retriculation.jpg",
     summary:
       "Premium estate water reticulation system designed for dependable distribution.",
   },

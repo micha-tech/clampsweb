@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Facebook, Instagram } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { navItems, services } from "@/lib/content";
 
@@ -12,12 +12,12 @@ const socialLinks = [
   {
     label: "Instagram",
     href: "https://www.instagram.com/clampsengineeringsolutions?igsh=MWdsMGlrZDFzNDh5ZA==",
-    icon: Instagram,
+    icon: InstagramIcon,
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/share/1C92EYj1pz/",
-    icon: Facebook,
+    icon: FacebookIcon,
   },
 ];
 
@@ -42,6 +42,50 @@ function TikTokIcon({ className }: { className?: string }) {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <rect
+        height="15"
+        rx="4"
+        stroke="currentColor"
+        strokeWidth="2"
+        width="15"
+        x="4.5"
+        y="4.5"
+      />
+      <circle cx="12" cy="12" r="3.2" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M16.7 7.3h.01"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2.4"
+      />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M14 8.2h2.2V5h-2.8c-3 0-4.7 1.8-4.7 4.8v2H6v3.3h2.7V21H12v-5.9h3l.5-3.3H12v-1.7c0-1.2.5-1.9 2-1.9Z"
+        fill="currentColor"
       />
     </svg>
   );

@@ -184,7 +184,7 @@ export const projects = [
     category: "Water Scheme Rehabilitation",
     location: "Ekiti",
     discipline: "Water Infrastructure",
-    image: "/project-images/water-scheme-rehabilitation.jpg",
+    image: "/project-images/water-infrastructure.jpg",
     summary:
       "Rehabilitation works to restore and strengthen community water infrastructure performance.",
   },

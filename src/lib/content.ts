@@ -184,6 +184,7 @@ export const projects = [
     category: "Water Scheme Rehabilitation",
     location: "Ekiti",
     discipline: "Water Infrastructure",
+    image: "/project-images/water-scheme-rehabilitation.jpg",
     summary:
       "Rehabilitation works to restore and strengthen community water infrastructure performance.",
   },
@@ -193,6 +194,7 @@ export const projects = [
     category: "Treatment Plant Construction",
     location: "Niger Delta",
     discipline: "Water Treatment",
+    image: "/project-images/water-treatment-plants.jpg",
     summary:
       "Distributed water treatment plant construction supporting reliable access across programme sites.",
   },
@@ -201,6 +203,7 @@ export const projects = [
     category: "Pumping Systems",
     location: "Nigeria",
     discipline: "Mechanical / Pumping",
+    image: "/project-images/intake-pumping-systems.jpg",
     summary:
       "Pontoon-based intake pumping installation for resilient water abstraction and transfer.",
   },
@@ -209,6 +212,7 @@ export const projects = [
     category: "Estate Infrastructure",
     location: "Lagos",
     discipline: "Reticulation Networks",
+    image: "/project-images/estate-reticulation-network.jpg",
     summary:
       "Premium estate water reticulation system designed for dependable distribution.",
   },
@@ -217,6 +221,7 @@ export const projects = [
     category: "Fire Protection",
     location: "Abuja",
     discipline: "Life Safety Systems",
+    image: "/project-images/fire-protection-system.jpg",
     summary:
       "Active fire safety infrastructure for a major commercial and operational facility.",
   },
@@ -225,6 +230,7 @@ export const projects = [
     category: "Industrial Revamp",
     location: "Delta",
     discipline: "Industrial Mechanical",
+    image: "/project-images/industrial-steel-revamp.jpg",
     summary:
       "Industrial revamp support for steel-sector operations and mechanical system performance.",
   },
@@ -233,6 +239,7 @@ export const projects = [
     category: "Operations & Maintenance",
     location: "Edo",
     discipline: "Water Scheme O&M",
+    image: "/project-images/water-operations-maintenance.jpg",
     summary:
       "Long-term operations support focused on dependable water scheme performance.",
   },

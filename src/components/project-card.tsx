@@ -7,6 +7,7 @@ type ProjectCardProps = {
   category: string;
   location: string;
   discipline: string;
+  image: string;
   summary: string;
   delay?: number;
 };
@@ -16,6 +17,7 @@ export function ProjectCard({
   category,
   location,
   discipline,
+  image,
   summary,
   delay = 0,
 }: ProjectCardProps) {
@@ -24,11 +26,11 @@ export function ProjectCard({
       <article className="group flex h-full flex-col rounded-lg border border-steel-100 bg-white shadow-industrial-sm transition hover:-translate-y-1 hover:border-clamps-line hover:shadow-industrial">
         <div className="relative h-36 overflow-hidden bg-gradient-to-br from-navy-900 to-navy-800">
           <Image
-            src="/engineering-systems-blueprint.png"
+            src={image}
             alt=""
             fill
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover object-center opacity-40 transition duration-500 group-hover:scale-105"
+            className="object-cover object-center transition duration-500 group-hover:scale-105"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-900/90 to-transparent p-5 pt-10">
             <p className="font-display text-lg font-semibold leading-tight text-white">

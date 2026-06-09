@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { FadeIn, MotionCard } from "@/components/motion";
@@ -105,32 +106,20 @@ export default function Home() {
           </div>
 
           <FadeIn delay={0.12}>
-            <div className="blueprint-panel relative overflow-hidden rounded-lg p-6 text-white shadow-industrial">
-              <div className="relative grid gap-4 sm:grid-cols-2">
-                {[
-                  ["Mechanical Systems", "Pumping, reticulation, rehabilitation"],
-                  ["Fire Protection", "Active systems for critical facilities"],
-                  ["Electrical Support", "Power infrastructure and panels"],
-                  ["Automation", "Monitoring, controls, optimization"],
-                ].map(([title, description]) => (
-                  <div
-                    key={title}
-                    className="rounded-lg border border-white/[0.12] bg-white/[0.07] p-5"
-                  >
-                    <CheckCircle2
-                      aria-hidden
-                      className="h-5 w-5 text-clamps-cyan"
-                    />
-                    <h3 className="mt-5 font-display text-lg font-semibold">
-                      {title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-steel-200">
-                      {description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <figure className="overflow-hidden rounded-lg border border-steel-100 bg-white p-2 shadow-industrial">
+              <Image
+                src="/about-site-inspection.jpg"
+                alt="Clamps Engineering team conducting site inspection on industrial pipework"
+                width={2048}
+                height={967}
+                sizes="(min-width: 1024px) 52vw, 100vw"
+                className="h-auto w-full rounded-md"
+              />
+              <figcaption className="px-3 py-4 text-sm font-semibold text-steel-700">
+                Site inspection and commissioning support by Clamps Engineering
+                personnel.
+              </figcaption>
+            </figure>
           </FadeIn>
         </div>
       </section>

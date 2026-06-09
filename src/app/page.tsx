@@ -266,7 +266,6 @@ export default function Home() {
             <SectionHeader
               label="Project Portfolio"
               title="Selected engineering work across water infrastructure, fire protection, estates, and industrial systems."
-              description="Each project card highlights category, location, engineering discipline, and scope delivered."
             />
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">

@@ -11,23 +11,23 @@ export function MobileStickyCTA() {
 
   useEffect(() => {
     if (pathname !== "/") {
-      setVisible(false);
       return;
     }
 
     const updateVisibility = () => setVisible(window.scrollY > 520);
 
-    updateVisibility();
+    const frame = window.requestAnimationFrame(updateVisibility);
     window.addEventListener("scroll", updateVisibility, { passive: true });
     const interval = window.setInterval(updateVisibility, 250);
 
     return () => {
+      window.cancelAnimationFrame(frame);
       window.removeEventListener("scroll", updateVisibility);
       window.clearInterval(interval);
     };
   }, [pathname]);
 
-  if (!visible) {
+  if (pathname !== "/" || !visible) {
     return null;
   }
 

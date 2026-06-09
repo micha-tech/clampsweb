@@ -9,8 +9,6 @@ type MotionBlockProps = PropsWithChildren<{
 }>;
 
 export function FadeIn({ children, className, delay = 0 }: MotionBlockProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
     <motion.div
       initial={false}

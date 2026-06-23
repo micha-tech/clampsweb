@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/cta-section";
 import { FadeIn, MotionCard } from "@/components/motion";
-import { HeroVisual } from "@/components/hero-visual";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeader } from "@/components/section-header";
 import { ServiceCard } from "@/components/service-card";
@@ -21,44 +20,76 @@ import {
 export default function Home() {
   return (
     <main>
-      <section id="home" className="industrial-bg relative overflow-hidden">
-        <div className="absolute inset-0 bg-engineering-grid bg-[length:42px_42px] opacity-35" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-steel-50 to-transparent" />
-        <div className="section-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
-          <div className="min-w-0 max-w-3xl">
+      <section
+        id="home"
+        className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-navy-950"
+      >
+        <Image
+          src="/mechanical-engineering-hero.webp"
+          alt="3D mechanical assembly being developed in engineering design software"
+          fill
+          priority
+          sizes="100vw"
+          className="-z-30 object-cover object-[66%_center] sm:object-[62%_center] lg:object-center"
+        />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(4,16,31,0.98)_0%,rgba(4,16,31,0.9)_38%,rgba(4,16,31,0.36)_68%,rgba(4,16,31,0.1)_100%)]" />
+        <div className="absolute inset-0 -z-20 bg-navy-950/35 lg:hidden" />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(4,16,31,0.82)_0%,transparent_44%,rgba(4,16,31,0.15)_100%)] lg:hidden" />
+        <div className="absolute inset-0 -z-10 bg-engineering-grid bg-[length:48px_48px] opacity-[0.09]" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-clamps-cyan/50 to-transparent" />
+
+        <div className="section-shell flex min-h-[calc(100svh-5rem)] items-center py-14 sm:py-16">
+          <div className="w-full max-w-3xl lg:max-w-[46rem]">
             <FadeIn>
-              <h1 className="font-display text-3xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Engineering Critical Infrastructure For Water, Fire Protection
-                & Industrial Systems
+              <div className="inline-flex items-center gap-3 rounded-full border border-clamps-cyan/25 bg-navy-950/45 px-4 py-2 backdrop-blur-md">
+                <span className="relative flex h-2 w-2" aria-hidden>
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-clamps-cyan opacity-50" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-clamps-cyan" />
+                </span>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-clamps-cyan sm:text-xs">
+                  Clamps Engineering Solutions
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn>
+              <h1 className="mt-6 max-w-[18ch] font-display text-[2.45rem] font-semibold leading-[1.06] tracking-[-0.035em] text-white sm:mt-8 sm:text-6xl lg:text-[4rem]">
+                Engineering critical infrastructure for lasting performance.
               </h1>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-steel-200 sm:text-lg">
-                Dependable engineering for water systems, fire protection,
-                electrical, automation, and industrial projects across Nigeria.
+              <p className="mt-6 max-w-xl text-base leading-7 text-steel-200 sm:text-lg sm:leading-8">
+                From concept to commissioning, Clamps delivers dependable water,
+                fire protection, electrical, automation, and industrial systems
+                across Nigeria.
               </p>
             </FadeIn>
             <FadeIn delay={0.14}>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
                 <Link
                   href="/request-quote"
-                  className="focus-ring inline-flex items-center justify-center gap-2 rounded-lg bg-clamps-blue px-6 py-4 text-sm font-semibold text-navy-950 shadow-glow-blue transition hover:bg-clamps-cyan"
+                  className="focus-ring group inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-clamps-blue px-6 py-4 text-sm font-semibold text-navy-950 shadow-glow-blue transition hover:bg-clamps-cyan"
                 >
-                  Request Engineering Consultation
-                  <ArrowRight aria-hidden className="h-4 w-4" />
+                  Discuss Your Project
+                  <ArrowRight
+                    aria-hidden
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  />
                 </Link>
                 <Link
                   href="/#projects"
-                  className="focus-ring hidden items-center justify-center rounded-lg border border-white/25 bg-white/[0.08] px-6 py-4 text-sm font-semibold text-white backdrop-blur transition hover:border-clamps-cyan hover:bg-white/[0.12] sm:inline-flex"
+                  className="focus-ring inline-flex min-h-14 items-center justify-center rounded-lg border border-white/25 bg-navy-950/35 px-6 py-4 text-sm font-semibold text-white backdrop-blur-md transition hover:border-clamps-cyan hover:bg-white/[0.1]"
                 >
-                  View Project Portfolio
+                  Explore Our Work
                 </Link>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-clamps-blue pl-5 text-sm font-semibold text-steel-200">
+              <div className="mt-9 flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-clamps-blue pl-4 text-xs font-semibold text-steel-200 sm:mt-11 sm:pl-5 sm:text-sm">
                 {trustRibbon.map((item, index) => (
-                  <span key={item} className="inline-flex items-center gap-3">
+                  <span
+                    key={item}
+                    className={`items-center gap-3 ${index > 2 ? "hidden sm:inline-flex" : "inline-flex"}`}
+                  >
                     {index > 0 ? (
                       <span className="h-1.5 w-1.5 rounded-full bg-clamps-cyan" />
                     ) : null}
@@ -68,8 +99,6 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
-
-          <HeroVisual />
         </div>
       </section>
 
